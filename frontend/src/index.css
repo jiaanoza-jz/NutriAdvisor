@@ -1,0 +1,105 @@
+:root {
+  /* Theme variables for light mode */
+  --bg-color: #fcf9f2;         /* Cream/off-white */
+  --surface-color: #ffffff;
+  --text-main: #2b3a2f;        /* Deep green */
+  --text-muted: #5e6d62;
+  --accent-color: #d16b54;     /* Warm terracotta */
+  --accent-hover: #bc5e49;
+  --border-color: #e2dfd8;
+  --shadow-sm: 0 4px 6px rgba(43, 58, 47, 0.05);
+  --shadow-md: 0 10px 20px rgba(43, 58, 47, 0.08);
+  
+  /* Macro card colors */
+  --macro-protein-bg: #e8f3ee;
+  --macro-protein-text: #2f694f;
+  --macro-carbs-bg: #fff0ed;
+  --macro-carbs-text: #b7523d;
+  --macro-fat-bg: #fdf5e6;
+  --macro-fat-text: #b8860b;
+  --macro-fiber-bg: #f0f4f8;
+  --macro-fiber-text: #4a6572;
+}
+
+[data-theme="dark"] {
+  /* Theme variables for dark mode */
+  --bg-color: #1a221c;         /* Dark deep green */
+  --surface-color: #232d26;
+  --text-main: #f0f4f1;
+  --text-muted: #a3b1a7;
+  --accent-color: #e67d64;     /* Lighter terracotta for contrast */
+  --accent-hover: #ff8b71;
+  --border-color: #3b4a40;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.4);
+
+  /* Macro card colors (dark adjusted) */
+  --macro-protein-bg: #1c3d2e;
+  --macro-protein-text: #a8d5c2;
+  --macro-carbs-bg: #4a2119;
+  --macro-carbs-text: #ffb4a6;
+  --macro-fat-bg: #3f3117;
+  --macro-fat-text: #ebd596;
+  --macro-fiber-bg: #1f303b;
+  --macro-fiber-text: #abc2cd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 400;
+}
+
+button {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Common utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.card {
+  background-color: var(--surface-color);
+  border-radius: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

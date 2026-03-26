@@ -1,0 +1,60 @@
+.app-header {
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--surface-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.logo-text {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.logo-text .italic {
+  color: var(--accent-color);
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+
+.theme-toggle:hover {
+  background-color: var(--border-color);
+}

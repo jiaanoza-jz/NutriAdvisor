@@ -1,0 +1,251 @@
+.result-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.result-header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.thumbnail-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.meal-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headline-stats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-badge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem 2rem;
+  border-radius: 20px;
+  background-color: var(--surface-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.calorie-badge {
+  border-bottom: 4px solid var(--accent-color);
+}
+
+.health-badge {
+  border-bottom: 4px solid #4ade80;
+}
+
+.stat-value {
+  font-family: 'Fraunces', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.of-ten {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detected-foods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.food-tag {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.macros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.macro-card {
+  padding: 1.5rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.macro-card.protein {
+  background-color: var(--macro-protein-bg);
+  color: var(--macro-protein-text);
+}
+
+.macro-card.carbs {
+  background-color: var(--macro-carbs-bg);
+  color: var(--macro-carbs-text);
+}
+
+.macro-card.fat {
+  background-color: var(--macro-fat-bg);
+  color: var(--macro-fat-text);
+}
+
+.macro-card.fiber {
+  background-color: var(--macro-fiber-bg);
+  color: var(--macro-fiber-text);
+}
+
+.macro-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.macro-value {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  padding: 2rem;
+}
+
+.card h3 {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.item-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.item-name {
+  color: var(--text-main);
+}
+
+.item-cals {
+  color: var(--text-muted);
+}
+
+.progress-bar-bg {
+  height: 8px;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.advice-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.reason-text {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.advice-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.swaps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.swaps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  line-height: 1.5;
+}
+
+.swap-icon {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.reset-btn {
+  align-self: flex-start;
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.reset-btn:hover {
+  background-color: var(--surface-color);
+  color: var(--text-main);
+  border-color: var(--text-muted);
+}
