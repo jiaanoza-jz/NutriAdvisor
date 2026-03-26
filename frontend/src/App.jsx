@@ -33,7 +33,12 @@ function App() {
       formData.append('goal', goal);
       formData.append('dietary_notes', notes || '');
 
-      const response = await fetch('/analyze', {
+      // 1. Grab the Vercel URL if deployed, otherwise fallback to local testing
+      // Note: Make sure your VITE_API_URL in Vercel does NOT end with a slash (/)
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
+      // 2. Use the dynamic URL for the fetch request
+      const response = await fetch(`${API_URL}/analyze`, {
         method: 'POST',
         body: formData,
       });
